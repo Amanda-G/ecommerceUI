@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './commonComponents/login/login-component/login.component';
 import { RegistrationComponent } from './commonComponents/registration/registration/registration.component';
+import { LogRegistrationComponent } from './dj-store/login-registration/log-registration/log-registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LogRegistrationComponent
   ],
   imports: [
     BrowserModule,
