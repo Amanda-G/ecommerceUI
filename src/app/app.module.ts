@@ -16,13 +16,15 @@ import {MatRadioModule} from "@angular/material/radio";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {FormsModule} from "@angular/forms";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {LoginAndRegistrationComponent} from './commonComponents/login-and-registration/login-and-registration/login-and-registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    LogRegistrationComponent
+    LogRegistrationComponent,
+    LoginAndRegistrationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,43 +1,30 @@
-<mat-accordion>
-    <mat-expansion-panel hideToggle>
+<form class="login-form">
 
-        <mat-expansion-panel-header>
-            <span class="flex-space-between">
-                <mat-radio-button value="sign in"></mat-radio-button>
-                <h2>Sign-in.</h2>
-                <p class="already-customer">Already a Customer?</p>
-            </span>
-        </mat-expansion-panel-header>
+    <mat-form-field class="login-input">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="joe@sample.com">
+    </mat-form-field>
 
-        <form class="login-form">
+    <mat-form-field class="login-input">
+        <mat-label>Password</mat-label>
+        <input matInput type="password">
+        <button (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+                class="eye-btn"
+                mat-icon-button matSuffix>
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
 
-            <mat-form-field class="login-input">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="joe@sample.com">
-            </mat-form-field>
+    <div id="checkBoxAndForgotIdDiv">
+        <mat-checkbox>Keep me signed in</mat-checkbox>
+        <div>
+            <hr>
+            <a class="hyper-link-black" href="#">Forgotten your ID or password?</a>
+        </div>
+    </div>
 
-            <mat-form-field class="login-input">
-                <mat-label>Password</mat-label>
-                <input matInput type="password">
-                <button (click)="hide = !hide"
-                        [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide"
-                        class="eye-btn"
-                        mat-icon-button matSuffix>
-                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-            </mat-form-field>
+    <button class="primary-button" color="primary" mat-raised-button>Sign-in</button>
 
-            <div id="checkBoxAndForgotIdDiv">
-                <mat-checkbox>Keep me signed in</mat-checkbox>
-                <div>
-                    <hr>
-                    <a class="hyper-link-black" href="#">Forgotten your ID or password?</a>
-                </div>
-            </div>
-
-            <button class="primary-button" color="primary" mat-raised-button>Sign-in</button>
-
-        </form>
-    </mat-expansion-panel>
-</mat-accordion>
+</form>

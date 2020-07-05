@@ -1,0 +1,23 @@
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <span class="flex-space-between">
+                <mat-radio-button value="sign in"></mat-radio-button>
+                <h2>Sign-in.</h2>
+                <p class="already-customer">Already a Customer?</p>
+            </span>
+        </mat-expansion-panel-header>
+        <app-login></app-login>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <span class="flex-space-between">
+                <mat-radio-button value="sign in"></mat-radio-button>
+                <h2>Create Account.</h2>
+                <p class="already-customer">New to DJ Store?</p>
+            </span>
+        </mat-expansion-panel-header>
+        <app-registration></app-registration>
+    </mat-expansion-panel>
+</mat-accordion>
