@@ -1,0 +1,33 @@
+mat-expansion-panel {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#registrationPanel {
+  border-radius: 0 0 4px 4px;
+}
+
+#loginPanel {
+  border-radius: 4px 4px 0 0;
+}
+
+.already-customer {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: .75rem;
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.background-color-grey{
+background-color: rgba(128, 128, 128, 0.4);
+}

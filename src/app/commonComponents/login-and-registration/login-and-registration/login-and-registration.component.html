@@ -1,23 +1,27 @@
-<mat-accordion>
-    <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
+<mat-radio-group [value]="radioButtonValue">
+    <mat-accordion>
+        <mat-expansion-panel (afterExpand)="radioButtonValue = 'sign in'" [expanded]="true" [ngClass]="{'background-color-grey': radioButtonValue !== 'sign in'}" hideToggle
+                             id="loginPanel">
+            <mat-expansion-panel-header>
             <span class="flex-space-between">
                 <mat-radio-button value="sign in"></mat-radio-button>
                 <h2>Sign-in.</h2>
                 <p class="already-customer">Already a Customer?</p>
             </span>
-        </mat-expansion-panel-header>
-        <app-login></app-login>
-    </mat-expansion-panel>
+            </mat-expansion-panel-header>
+            <app-login id="loginComponent"></app-login>
+        </mat-expansion-panel>
 
-    <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
+        <mat-expansion-panel (afterExpand)="radioButtonValue = 'registration'" [ngClass]="{'background-color-grey': radioButtonValue !== 'registration'}" hideToggle
+                             id="registrationPanel">
+            <mat-expansion-panel-header>
             <span class="flex-space-between">
-                <mat-radio-button value="sign in"></mat-radio-button>
+                <mat-radio-button value="registration"></mat-radio-button>
                 <h2>Create Account.</h2>
                 <p class="already-customer">New to DJ Store?</p>
             </span>
-        </mat-expansion-panel-header>
-        <app-registration></app-registration>
-    </mat-expansion-panel>
-</mat-accordion>
+            </mat-expansion-panel-header>
+            <app-registration></app-registration>
+        </mat-expansion-panel>
+    </mat-accordion>
+</mat-radio-group>
