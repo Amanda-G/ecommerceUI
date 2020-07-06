@@ -1,14 +1,25 @@
-<form class="login-form">
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="logValues(loginForm)">
 
     <mat-form-field class="login-input">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="joe@sample.com">
+        <input matInput type="text" placeholder="joe@sample.com" name="email"
+               [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+        </mat-error>
     </mat-form-field>
 
     <mat-form-field class="login-input">
         <mat-label>Password</mat-label>
-        <input matInput type="password">
-        <button (click)="hide = !hide"
+        <input matInput [type]="type"
+               [formControl]="passwordFormControl">
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+            Password is <strong>required</strong>
+        </mat-error>
+        <button (click)="hide = !hide; togglePassword()"
                 [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide"
                 class="eye-btn"
@@ -18,10 +29,12 @@
     </mat-form-field>
 
     <div id="checkBoxAndForgotIdDiv">
-        <mat-checkbox>Keep me signed in</mat-checkbox>
+        <mat-checkbox [formControl]="checkboxFormControl">
+            Keep me signed in
+        </mat-checkbox>
         <div>
             <hr>
-            <a class="hyper-link-black" href="#">Forgotten your ID or password?</a>
+            <a class="hyper-link-black" href="#">Forgot your password?</a>
         </div>
     </div>
 

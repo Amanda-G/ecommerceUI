@@ -14,9 +14,10 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatExpansionModule} from "@angular/material/expansion";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {LoginAndRegistrationComponent} from './commonComponents/login-and-registration/login-and-registration/login-and-registration.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {LoginAndRegistrationComponent} from './commonComponents/login-and-regist
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatInputModule,
     MatCardModule,
     MatIconModule,
@@ -38,7 +40,8 @@ import {LoginAndRegistrationComponent} from './commonComponents/login-and-regist
     MatRadioModule,
     MatExpansionModule,
     FormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,25 +1,8 @@
-//resets
-h2, p {
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-weight: bold;
-}
-
 hr {
   border: 0;
   padding: 0;
   height: 1px;
   background-color: lightgray;
-}
-
-
-.already-customer {
-  padding-top: 5px;
-  padding-left: 5px;
-  font-size: .75rem;
 }
 
 .login-form {
@@ -49,13 +32,7 @@ hr {
   text-decoration: none;
 }
 
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#checkBoxAndForgotIdDiv {
+#checkBoxAndForgotPasswordDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
