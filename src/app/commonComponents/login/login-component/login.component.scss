@@ -25,6 +25,7 @@ hr {
 .primary-button {
   width: 75%;
   border-radius: 20px;
+  margin-top: 5px;
 }
 
 .hyper-link-black {
@@ -38,5 +39,31 @@ hr {
   align-items: center;
   padding-top: 5%;
   padding-bottom: 10%;
+}
+
+.forgot-password-create-account {
+  display: flex;
+}
+
+.create-account {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .create-account {
+  display: block;
+  margin-left: 5px;
+  }
+
+  .checkbox {
+  text-align: center;
+  }
+
+  .primary-button {
+    width: 90%;
+    border-radius: 15px;
+  }
+
 }
 

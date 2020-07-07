@@ -15,13 +15,6 @@ hr {
   background-color: lightgray;
 }
 
-
-.already-customer {
-  padding-top: 5px;
-  padding-left: 5px;
-  font-size: .75rem;
-}
-
 .login-form {
   margin: 0 auto;
   display: flex;
@@ -37,6 +30,12 @@ hr {
 .eye-btn {
   background-color: unset;
   border: unset;
+}
+
+.create-account-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .primary-button {
@@ -63,3 +62,41 @@ hr {
   padding-bottom: 10%;
 }
 
+.already-customer {
+  display: none;
+}
+
+@media only screen and (min-width: 768px){
+
+  .login-form{
+  margin-top: 10px;
+  }
+
+  .login-input {
+    width: 55%;
+  }
+
+  .already-customer{
+    display: flex;
+    margin-bottom: 10px;;
+  }
+
+  .customer{
+    margin-right: 5px;
+  }
+
+  .create-account-button {
+    justify-content: flex-end;
+    background-color: #F7F7F7;
+    border-top: 2px solid darkgrey;
+    width: 110%;
+    padding: 5px 5px 5px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .primary-button{
+    width: 35%;
+    margin: 5px;
+  }
+}

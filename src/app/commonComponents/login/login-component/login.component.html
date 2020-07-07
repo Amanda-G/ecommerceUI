@@ -29,12 +29,19 @@
     </mat-form-field>
 
     <div id="checkBoxAndForgotIdDiv">
+        <div class="checkbox">
         <mat-checkbox [formControl]="checkboxFormControl">
             Keep me signed in
         </mat-checkbox>
+        </div>
+
         <div>
             <hr>
+            <div class="forgot-password-create-account">
             <a class="hyper-link-black" href="#">Forgot your password?</a>
+                <p class="create-account">|</p>
+                <a class="hyper-link-black create-account" href="#">Create account</a>
+            </div>
         </div>
     </div>
 

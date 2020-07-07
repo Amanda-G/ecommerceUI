@@ -32,3 +32,9 @@ $ecommerceUI-theme: mat-light-theme($ecommerceUI-primary, $ecommerceUI-accent, $
 html, body { height: 100%; background-color: lightgray;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media only screen and (min-width: 768px){
+  body {
+    background-color: white;
+  }
+}
