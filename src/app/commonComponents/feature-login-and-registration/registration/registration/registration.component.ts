@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {LoginAndRegistrationService} from '../../login-and-registration/login-and-registration.service';
 
 @Component({
   selector: 'app-registration',
@@ -20,7 +21,7 @@ export class RegistrationComponent implements OnInit {
     Validators.required
   ]);
   type: any = 'password';
-  constructor() { }
+  constructor(public loginAndRegistrationService: LoginAndRegistrationService) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup( {

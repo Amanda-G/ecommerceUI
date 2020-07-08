@@ -4,8 +4,10 @@ import {Injectable} from '@angular/core';
     providedIn: 'root'
 })
 export class LoginAndRegistrationService {
-    selectedComponent: any;
-
+    selectedComponent = 'login';
     constructor() {
+    }
+    switchPage() {
+        this.selectedComponent = this.selectedComponent === 'login' ? 'registration' : 'login';
     }
 }

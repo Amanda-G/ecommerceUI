@@ -27,15 +27,15 @@
 </mat-radio-group>
 
 <div class="desktop-view">
-<!--    <div class="login-page">-->
-<!--    <mat-icon svgIcon="DJ_LOGO"></mat-icon>-->
-<!--    <h1>-->
-<!--        Sign in to DJ-->
-<!--    </h1>-->
-<!--    <app-login class="login-component"></app-login>-->
-<!--    </div>-->
+    <div *ngIf="loginAndRegistrationService.selectedComponent === 'login'" class="login-page">
+    <mat-icon svgIcon="DJ_LOGO"></mat-icon>
+    <h1>
+        Sign in to DJ
+    </h1>
+    <app-login class="login-component"></app-login>
+    </div>
 
-    <div class="signup-page">
+    <div *ngIf="loginAndRegistrationService.selectedComponent === 'registration'" class="signup-page">
         <div class="registration-page">
             <h1 class="create-account">Create your Account</h1>
             <app-registration></app-registration>

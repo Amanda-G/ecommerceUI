@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-log-registration',
@@ -9,16 +7,10 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class LogRegistrationComponent implements OnInit {
 
-    constructor(private matIconRegistry: MatIconRegistry,
-                private domSanitizer: DomSanitizer
-    ) {
+    constructor() {
     }
 
     ngOnInit(): void {
-        this.matIconRegistry.addSvgIcon(
-            `DJ_LOGO`,
-            this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/DJ-Logo.svg')
-        );
     }
 
 }

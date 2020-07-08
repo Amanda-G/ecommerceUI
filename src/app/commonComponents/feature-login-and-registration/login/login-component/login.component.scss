@@ -1,8 +1,8 @@
-hr {
-  border: 0;
-  padding: 0;
-  height: 1px;
-  background-color: lightgray;
+.hr-line{
+  border-radius: 3px;
+  height: 2px;
+  //width: 50%;
+  background: radial-gradient(farthest-side, rgba(52,73,94,.3) 0,rgba(52,73,94,.1) 85%,transparent);
 }
 
 .login-form {
@@ -52,8 +52,9 @@ hr {
 @media only screen and (min-width: 768px) {
 
   .create-account {
-  display: block;
-  margin-left: 5px;
+    display: block;
+    margin-left: 5px;
+    cursor: pointer;
   }
 
   .checkbox {

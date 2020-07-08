@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {LoginAndRegistrationService} from '../login-and-registration.service';
 
 @Component({
     selector: 'app-login-and-registration',
@@ -8,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class LoginAndRegistrationComponent implements OnInit {
     radioButtonValue: 'registration' | 'sign in' = 'sign in';
 
-    constructor() {
+    constructor(public loginAndRegistrationService: LoginAndRegistrationService) {
     }
 
     ngOnInit(): void {
