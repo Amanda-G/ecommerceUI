@@ -1,0 +1,55 @@
+<form (ngSubmit)="verifyLogin(loginForm)" [formGroup]="loginForm" class="login-form">
+
+    <mat-form-field class="login-input">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" placeholder="joe@sample.com" name="email"
+               [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="login-input">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="type"
+               [formControl]="passwordFormControl">
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+            Password is <strong>required</strong>
+        </mat-error>
+        <button (click)="hide = !hide; togglePassword()" type="button"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+                class="eye-btn"
+                mat-icon-button matSuffix>
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <div id="checkBoxAndForgotIdDiv">
+
+        <div class="checkbox">
+        <mat-checkbox [formControl]="checkboxFormControl">
+            Keep me signed in
+        </mat-checkbox>
+        </div>
+
+        <div>
+
+            <div class="hr-line"></div>
+
+            <div class="forgot-password-create-account">
+                <a class="hyper-link-black" href="#">Forgot your password?</a>
+                <p class="create-account">|</p>
+                <a (click)="loginAndRegistrationService.switchPage()" class="hyper-link-black create-account">Create account</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button class="primary-button" color="primary" mat-raised-button>Sign-in</button>
+
+</form>

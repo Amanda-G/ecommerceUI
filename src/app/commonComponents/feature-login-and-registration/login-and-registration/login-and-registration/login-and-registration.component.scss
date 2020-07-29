@@ -1,0 +1,99 @@
+mat-expansion-panel {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#registrationPanel {
+  border-radius: 0 0 4px 4px;
+}
+
+#loginPanel {
+  border-radius: 4px 4px 0 0;
+}
+
+.already-customer {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: .75rem;
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.background-color-grey{
+background-color: rgba(128, 128, 128, 0.4);
+}
+
+.desktop-view {
+  display: none;
+}
+
+@media only screen and (min-width: 768px){
+  .desktop-view{
+    display: block;
+  }
+
+  mat-radio-group {
+    display: none;
+  }
+
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
+  .login-component {
+    width: 300px;
+  }
+
+  h1{
+    margin: 0;
+  }
+
+  mat-icon {
+    height: 0%;
+    width: 15%;
+  }
+
+  .signup-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(66, 66, 66, 0.3);
+    z-index: 1;
+  }
+
+  .registration-page {
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 425px;
+    border: 2px solid darkgrey;
+  }
+
+  .create-account {
+    background-color: #F7F7F7;
+    width:100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid darkgrey;
+  }
+
+}
