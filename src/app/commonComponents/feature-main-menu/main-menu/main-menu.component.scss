@@ -1,0 +1,44 @@
+.munna:hover{
+  z-index:1000;
+  box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+}
+
+//#underline {
+//  width: 100%;
+//  height: 20%;
+//  background-color: red;
+//}
+//
+//.skillsDouble li {
+//  width:100px;
+//  background: linear-gradient(to right, grey 50%, white 50%);
+//  background-size: 200% 100%;
+//  transition:background 1s ease;
+//}
+//.skillsDouble li:hover {
+//  background-position:right;
+//}
+//
+//#muu{
+//  background-color: blue;
+//  height: 5%;
+//  width: 100%;
+//}
+
+.muu {
+  height: 120%;
+  width:120%;
+  background: linear-gradient(to right, grey 50%, white 50%);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.muu:hover {
+  opacity: 1;
+  background-position:right;
+}
+
+#parrentDiv{
+  width: 30%;
+}
+
